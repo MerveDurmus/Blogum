@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="Blogum.Admin.admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="admin.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            color: #FF0000;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+    <div class="kutu">
+        <div class="slider">
+        </div>
+        <div class="govde">
+            <div class="govdesol">
+                
+                <div class="govdesolbaslik">MENÜLER</div>
+                <div class="govdesolicerik">
+                    <div style="height: 25px; color: #726868; line-height: 25px; margin-top:5px; font-weight: bold; background-image: url(../Temalar/menü.png); background-repeat:repeat-x;">&nbsp;&nbsp;&nbsp;<a href="Duyurular.aspx"> -Duyurular</a></div>
+                    <div style="height: 25px; color: #726868; line-height: 25px; margin-top:5px; font-weight: bold; background-image: url(../Temalar/menü.png); background-repeat:repeat-x;">&nbsp;&nbsp;&nbsp;<a href="Kategoriler.aspx"> -Kategoriler</a></div>
+                    <div style="height: 25px; color: #726868; line-height: 25px; margin-top:5px; font-weight: bold; background-image: url(../Temalar/menü.png); background-repeat:repeat-x;">&nbsp;&nbsp;&nbsp;<a href="Makaleler.aspx"> -Makaleler</a></div>
+                    <div style="height: 25px; color: #726868; line-height: 25px; margin-top:5px; font-weight: bold; background-image: url(../Temalar/menü.png); background-repeat:repeat-x;">&nbsp;&nbsp;&nbsp;<a href="Yorumlar.aspx"> -Yorumlar</a></div>
+                    <div style="height: 25px; color: #726868; line-height: 25px; margin-top:5px; font-weight: bold; background-image: url(../Temalar/menü.png); background-repeat:repeat-x;">&nbsp;&nbsp;&nbsp;<a href="Mesajlar.aspx"> -Mesajlar</a></div>
+                     <div style="height: 25px; color:#c10b0b; line-height: 25px; margin-top:5px; font-weight: bold; background-image: url(../Temalar/menü.png); background-repeat:repeat-x;">&nbsp;&nbsp;&nbsp;<a href="Default.aspx" class="auto-style1"> -Çıkış Yap</a></div>
+                
+                </div>
+               
+            </div>
+            <div class="govdesag"><asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"> </asp:ContentPlaceHolder></div>
+        </div> 
+    </div>
+    </form>
+</body>
+</html>

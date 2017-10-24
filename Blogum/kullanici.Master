@@ -1,0 +1,157 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="kullanici.master.cs" Inherits="Blogum.kullanici" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Merve Durmuş Kişisel Bloğu</title>
+    <link href="kullanici.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src="sliderJS/jquery.js"></script>
+    <script src="sliderJS/amazingslider.js"></script>
+    <link rel="stylesheet" type="text/css" href="sliderJS/amazingslider-1.css" />
+    <script src="sliderJS/initslider-1.js"></script>
+    <link rel="SHORTCUT ICON" href="Temalar/icon.ico" />
+
+
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+
+        .auto-style2 {
+            background-color: lightpink;
+            color: white;
+        }
+        .buto{
+            background-color:lightpink;
+            height:30px;
+            width:38px;
+            color:white;
+            border:1px dotted #726868;
+        }
+    </style>
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="kutu">
+            <div class="slider">
+                <div id="amazingslider-wrapper-1" style="display: block; position: relative; max-width: 600px; margin: 0px auto 56px;">
+                    <div id="amazingslider-1" style="display: block; position: relative; margin: 0 auto;">
+                        <ul class="amazingslider-slides" style="display: none;">
+                            <asp:DataList ID="dl_slider" runat="server">
+                                <ItemTemplate>
+                                    <li>
+                                       <a href="MakaleDetay.aspx?makaleId=<%# Eval("makaleId") %>"> <img src="<%#Eval("makaleResim") %>" alt="<%#Eval("makaleBaslik") %>" /></a></li>
+                                </ItemTemplate>
+                            </asp:DataList>
+                        </ul>
+                        <ul class="amazingslider-thumbnails" style="display: none;">
+                            <li>
+                                <img src="sResim/1-tn.png" alt="1" title="1" /></li>
+                            <li>
+                                <img src="sResim/2-tn.png" alt="2" title="2" /></li>
+                            <li>
+                                <img src="sResim/3-tn.png" alt="3" title="3" /></li>
+                            <li>
+                                <img src="sResim/4-tn.png" alt="4" title="4" /></li>
+                        </ul>
+                        <div class="amazingslider-engine"><a href="http://amazingslider.com" title="Responsive jQuery Content Slider">Responsive jQuery Content Slider</a></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="menu">
+                <a href="Default.aspx">
+                    <div style="width: 280px; height: 30px; border-right-style: dotted; border-right-width: 1px; border-right-color: #f5f5f0; float: left; color: white; font-size: 24px; text-align: center; line-height: 30px">
+                        Blog - Merve Durmuş
+                    </div>
+                </a>
+                <div style="width: 700px; height: 30px; float: right">
+                    <a class="a" href="Default.aspx">
+                        <div class="menubutton">Bloğum</div>
+                    </a>
+                    <a class="a" href="Hakkimda.aspx">
+                        <div class="menubutton">Hakkımda</div>
+                    </a>
+                    <a class="a" href="Galarim.aspx">
+                        <div class="menubutton">Galeri</div>
+                    </a>
+                    <a class="a" href="Iletisim.aspx">
+                        <div class="menubutton">İletişim</div>
+                    </a>
+
+                </div>
+            </div>
+
+            <div style="height: auto; width: auto; float: right;">
+                <div style="height: 30px; width:auto; float: right;">
+                    <asp:TextBox ID="txt_ara" runat="server" placeHolder="Makale Ara" CssClass="textboxgorsel" Width="200px" ></asp:TextBox>
+                    <asp:Button ID="btn_ara" runat="server" CssClass="buto" Text="Ara" OnClick="btn_ara_Click"  />
+                </div>
+            </div>
+            <div class="govde">
+                <div class="govdesol">
+                    <div class="govdesolbaslik" style="line-height: 30px">DUYURULAR</div>
+                    <div class="govdesolicerik">
+                        <asp:DataList ID="dl_duyuru" runat="server" Width="100%">
+                            <ItemTemplate>
+                                <table class="auto-style1">
+                                    <tr>
+                                        <td style="background-color: #f5f5f0">
+                                            <asp:Image ID="Image1" runat="server" Height="30px" ImageUrl='<%# Eval("duyuruResim") %>' Width="30px" />
+                                        </td>
+                                        <td style="background-color: #f5f5f0; padding-left: 3px;">
+                                            <asp:Label ID="Label1" runat="server" ForeColor="#333333" Text='<%# Eval("duyuruBaslik") %>'></asp:Label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="background-color: #f5f5f0; padding-left: 5px;">
+                                            <asp:Label ID="Label2" runat="server" ForeColor="#666666" Text='<%# Eval("duyuruIcerik") %>'></asp:Label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="background-color: #f5f5f0; border-bottom-style: solid; border-bottom-color: #ffb6c1; border-bottom-width: 1px; text-align: right; font-size: small;">
+                                            <asp:Label ID="Label3" runat="server" ForeColor="Gray" Text='<%# Eval("duyuruTarih","{0:dd MMMM yyyy}") %>'></asp:Label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </ItemTemplate>
+                        </asp:DataList>
+                    </div>
+                    <div style="height: 30px; width: 100%;"></div>
+                    <div class="govdesolbaslik" style="line-height: 30px">KATEGORİLER</div>
+                    <div class="govdesolicerik">
+                        <asp:DataList ID="dl_Kategori" runat="server" Width="100%">
+                            <ItemTemplate>
+                                <table class="auto-style1">
+                                    <tr>
+                                        <td style="background-color: #f5f5f0">
+                                            <asp:Image ID="Image1" runat="server" Height="30px" ImageUrl='<%# Eval("kategoriResim") %>' Width="30px" />
+                                        </td>
+                                        <td style="background-color: #f5f5f0">
+                                            <a class="a" href="KategoriDetay.aspx?kategoriId=<%# Eval("kategoriId") %>">&nbsp;<asp:Label ID="Label4" runat="server" ForeColor="#666666" Text='<%# Eval("kategoriAd") %>'></asp:Label></a>
+                                            (
+                                            <asp:Label ID="Label5" runat="server" ForeColor="#333333" Text='<%# Eval("kategoriAdet") %>'></asp:Label>
+                                            )</td>
+                                    </tr>
+                                </table>
+                            </ItemTemplate>
+                        </asp:DataList>
+                    </div>
+                </div>
+
+                <div class="govdesag">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div class="footer"> Merve Durmuş-2017</div>
+        </div>
+    </form>
+</body>
+</html>
+
+

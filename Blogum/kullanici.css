@@ -1,0 +1,116 @@
+﻿body {
+    background-color:#ebebe0;
+}
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+.a{
+    text-decoration:none;
+}
+.a:hover{
+    font-weight:bolder;
+}
+.menubutton{
+    float:left;
+    width:120px;
+    height:26px;
+    margin-top:2px;
+    color:#726868;
+    background-color:#ebebe0;
+    line-height:26px;
+    text-align:center;
+    margin-right:20px;
+    font-size:18px;
+    margin-bottom:2px;
+
+}
+.menubutton:hover{
+    font-weight:bolder;
+}
+.butongorsel{
+    background-color:lightpink;
+    height:25px;
+    width:100px;
+    color:white;
+}
+.butongorsel:hover{
+    background-color:rgba(160, 148, 148, 0.87);
+
+}
+.textboxgorsel{
+    height:30px;
+    width:150px;
+    border:1px dotted #726868;
+}
+.dropdownlistGörsel{
+    height:25px;
+    width:auto;
+    border:1px dotted #b6b2b2;
+
+}
+.kutu{
+    width:1000px;
+    height:auto;
+    margin:0 auto; /*sayfayı ortalar 1000 px fazlasını kenardan dıştan ortalayacaktır.*/
+}
+    .kutu .slider{
+        width:100%;
+        height:300px;
+        float:left;
+        background-color:lightpink;
+
+    }
+    .kutu .menu{
+        width:100%;
+        height:30px;
+        float:left;
+        background-color:lightpink;
+        margin-top:20px;
+        margin-bottom:20px;
+    }
+    .kutu .govde{
+        width:100%;
+        height:auto;
+        float:left;
+        margin-top:5px;
+    }
+    .kutu .govde .govdesol{
+        width:280px;
+        height:auto;
+        float:left;
+
+    }
+        .kutu .govde .govdesol .govdesolbaslik{
+            width:100%;
+            height:30px;
+            float:left;
+            background-color:lightpink;
+            border:1px dotted #b6b2b2;
+            color:#fff;
+            font-weight:bolder;
+        }
+        .kutu .govde .govdesol .govdesolicerik{
+            width:100%;
+            height:auto;
+            float:left;
+            border:1px dotted #b6b2b2;
+
+        }
+    .kutu .govde .govdesag{
+        width:710px;
+        height:auto;
+        float:right;
+        border:1px dotted lightpink;
+    }
+    .kutu .footer{
+        width:100%;
+        height:30px;
+        float:left;
+        background-color:lightpink;
+        margin-top:20px;
+        line-height:30px;
+        color:#fff;
+        text-align:center;
+    }
